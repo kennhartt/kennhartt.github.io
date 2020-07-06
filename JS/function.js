@@ -3,24 +3,23 @@ $(document).ready(function () {
     var aboutItem = document.getElementById("aboutItem");
     var resumeItem = document.getElementById("resumeItem");
     var contactItem = document.getElementById("contactItem");
-    // Says this function is performed continuisly while scrolling.
-    var Scroll = $(window).scrollTop() + 1, // This variable finds the distance you have scrolled from the top.
-      SectionOneOffset = $("#about").offset().top, // This variable finds the distance between #section-one and the top. Replace #section-one with the ID of your section.
-      SectionTwoOffset = $("#resume").offset().top; // This variable finds the distance between #section-two and the top. Replace #section-two with the ID of your section. You can duplicate this for as many sections as you want.
-    SectionThreeOffset = $("#contact").offset().top;
 
-    if (Scroll >= SectionOneOffset) {
-      // If you have scrolled past section one do this.
+    var Scroll = $(window).scrollTop() + 1, // distance you have scrolled from the top.
+      SectionOne = $("#about").offset().top, // distance between #section-one and the top.
+      SectionTwo = $("#resume").offset().top;
+    SectionThree = $("#contact").offset().top;
+
+    if (Scroll >= SectionOne - 100) {
       aboutItem.classList.add("active", "badge-info");
       resumeItem.classList.remove("active", "badge-info");
       contactItem.classList.remove("active", "badge-info");
     }
-    if (Scroll >= SectionTwoOffset) {
+    if (Scroll >= SectionTwo) {
       aboutItem.classList.remove("active", "badge-info");
       resumeItem.classList.add("active", "badge-info");
       contactItem.classList.remove("active", "badge-info");
     }
-    if (Scroll >= SectionThreeOffset - 500) {
+    if (Scroll >= SectionThree - 500) {
       aboutItem.classList.remove("active", "badge-info");
       resumeItem.classList.remove("active", "badge-info");
       contactItem.classList.add("active", "badge-info");
