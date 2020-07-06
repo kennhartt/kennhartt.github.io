@@ -9,12 +9,12 @@ $(document).ready(function () {
       SectionTwo = $("#resume").offset().top;
     SectionThree = $("#contact").offset().top;
 
-    if (Scroll >= SectionOne - 100) {
+    if (Scroll >= SectionOne) {
       aboutItem.classList.add("active", "badge-info");
       resumeItem.classList.remove("active", "badge-info");
       contactItem.classList.remove("active", "badge-info");
     }
-    if (Scroll >= SectionTwo) {
+    if (Scroll >= SectionTwo - 250) {
       aboutItem.classList.remove("active", "badge-info");
       resumeItem.classList.add("active", "badge-info");
       contactItem.classList.remove("active", "badge-info");
