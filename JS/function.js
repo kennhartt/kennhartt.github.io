@@ -1,7 +1,6 @@
 $(document).ready(function () {
-  var aboutItem = document.getElementById("aboutItem");
-  aboutItem.classList.add("active", "badge-info");
   $(window).scroll(function () {
+    var aboutItem = document.getElementById("aboutItem");
     var resumeItem = document.getElementById("resumeItem");
     var contactItem = document.getElementById("contactItem");
 
