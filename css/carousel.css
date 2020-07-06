@@ -43,13 +43,13 @@ body {
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */
-@media (min-width: 40em) {
+@media (min-width: 767px) {
   .featurette-heading {
     font-size: 50px;
   }
 }
 
-@media (min-width: 62em) {
+@media (min-width: 992px) {
   .featurette-heading {
     margin-top: 7rem;
   }
